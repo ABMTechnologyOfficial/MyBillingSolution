@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "313781290653",
+    "project_id": "my-billing-solutions",
+    "storage_bucket": "my-billing-solutions.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313781290653:android:93f9b4b01402b1ca93f674",
+        "android_client_info": {
+          "package_name": "com.abmtech.mybillingsolution"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313781290653-sn8bnpoiqqdfappmg1bf8ev2877906pr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.abmtech.mybillingsolution",
+            "certificate_hash": "6ced05644c480575e449387637040f740f73efb5"
+          }
+        },
+        {
+          "client_id": "313781290653-0d18qoc9r5lb7pj53r4vis6j2eklarme.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhrATXnivP81xpMqrMm6NGuaf1QXgT--k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313781290653-0d18qoc9r5lb7pj53r4vis6j2eklarme.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
