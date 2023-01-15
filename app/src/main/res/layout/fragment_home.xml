@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.HomeFragment">
 
     <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/header">
+        android:layout_height="?attr/actionBarSize">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home"
             android:layout_centerInParent="true"
             android:fontFamily="@font/heebo_medium"
+            android:text="Home"
             android:textColor="@color/black"
-            android:textSize="@dimen/_15sdp"
-            />
+            android:textSize="@dimen/_15sdp" />
 
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_below="@id/header"
-        android:id="@+id/body">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,7 +38,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
@@ -49,35 +48,37 @@
                 app:cardElevation="@dimen/_5sdp">
 
                 <TextView
+                    android:id="@+id/text_add_purchase"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:fontFamily="@font/heebo_regular"
                     android:gravity="center"
-                    android:padding="@dimen/_30sdp"
                     android:text="Add Purchase"
+                    android:textSize="@dimen/_10sdp"
                     android:textColor="@color/black" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                app:cardBackgroundColor="#FF3EA8A0"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
+                app:cardBackgroundColor="#FF3EA8A0"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardElevation="@dimen/_5sdp">
 
                 <TextView
+                    android:id="@+id/text_generate_bill"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:fontFamily="@font/heebo_regular"
+                    android:textSize="@dimen/_10sdp"
                     android:gravity="center"
-                    android:padding="@dimen/_30sdp"
                     android:text="Generate Bill"
                     android:textColor="@color/black" />
 
@@ -88,9 +89,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:paddingHorizontal="@dimen/_15sdp"
-            android:paddingVertical="@dimen/_15sdp"
-            android:orientation="vertical">
+            android:paddingVertical="@dimen/_15sdp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -102,17 +103,17 @@
 
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/recycler_view" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/text_empty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:fontFamily="@font/heebo_medium"
                 android:text="No Transactions Completed to Show"
-                android:layout_marginTop="@dimen/_20sdp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp" />

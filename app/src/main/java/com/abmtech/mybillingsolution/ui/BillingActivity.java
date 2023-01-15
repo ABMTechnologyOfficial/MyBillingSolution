@@ -18,5 +18,6 @@ public class BillingActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         activity = BillingActivity.this;
 
+
     }
 }

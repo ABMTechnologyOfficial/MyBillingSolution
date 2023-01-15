@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_10sdp"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    tools:ignore="SpUsage,UnusedAttribute">
+
+    <TextView
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:id="@+id/text_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo_bold"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:textSize="@dimen/_12sdp" />
+
+    <LinearLayout
+        android:id="@+id/ll_price_lay"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/heebo_regular"
+            android:text="Price: "
+            android:textColor="#75828E"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:fontFamily="@font/heebo_medium"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_12sdp" />
+        <!--                android:text="@string/rupee"-->
+
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo_medium"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_quantity_lay"
+        android:layout_width="wrap_content"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/heebo_regular"
+            android:text="Quantity: "
+            android:textColor="#75828E"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/text_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:fontFamily="@font/heebo_medium"
+            android:maxWidth="@dimen/_150sdp"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_product_id_lay"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/heebo_regular"
+            android:text="Product ID: "
+            android:textColor="#75828E"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/text_product_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:fontFamily="@font/heebo_medium"
+            android:maxWidth="@dimen/_150sdp"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_purchase_date"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/heebo_regular"
+            android:text="Purchase Date: "
+            android:textColor="#75828E"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/text_purchase_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:fontFamily="@font/heebo_medium"
+            android:maxWidth="@dimen/_150sdp"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/light_gray"
+        android:layout_marginTop="@dimen/_15sdp" />
+</LinearLayout>

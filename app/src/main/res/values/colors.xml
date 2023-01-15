@@ -10,5 +10,9 @@
 
     <color name="color_primary">#2226E5</color>
     <color name="color_primary_dark">#00025A</color>
+    <color name="colorAccent">#1B1D7B</color>
     <color name="gray_black">#666666</color>
+    <color name="white_light">#E5E7EB</color>
+    <color name="light_gray">#E5E7EB</color>
+    <color name="edit_text_color">#A1A8B0</color>
 </resources>

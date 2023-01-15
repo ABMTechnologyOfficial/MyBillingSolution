@@ -22,13 +22,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/heebo_bold"
-                android:text="My Stock"
+                android:text="Inventory"
                 android:layout_marginBottom="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textSize="@dimen/_18sdp" />
-
+                android:textSize="@dimen/_15sdp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
@@ -36,7 +35,13 @@
                 android:paddingBottom="@dimen/_40sdp"
                 android:id="@+id/recycler_view" />
 
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressbar"/>
+
             <TextView
+                android:visibility="gone"
                 android:id="@+id/text_empty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
