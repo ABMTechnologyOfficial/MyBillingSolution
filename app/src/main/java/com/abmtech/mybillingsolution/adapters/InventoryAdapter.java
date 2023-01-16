@@ -52,4 +52,18 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.View
             this.binding = binding;
         }
     }
+
+    public void removeItem(int position) {
+        data.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void restoreItem(InventoryModel item, int position) {
+        data.add(position, item);
+        notifyItemInserted(position);
+    }
+
+    public ArrayList<InventoryModel> getData() {
+        return data;
+    }
 }
