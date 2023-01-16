@@ -1,6 +1,8 @@
 package com.abmtech.mybillingsolution.models;
 
-public class InventoryModel {
+import java.io.Serializable;
+
+public class InventoryModel implements Serializable {
     String name, quantity, price, description, purchase_date, currentTime, user_id, product_id;
 
     public InventoryModel(String name, String quantity, String price, String description, String purchase_date, String currentTime, String user_id, String product_id) {

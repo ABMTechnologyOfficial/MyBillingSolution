@@ -1,7 +1,5 @@
 package com.abmtech.mybillingsolution.ui;
 
-import static com.abmtech.mybillingsolution.util.ShowUtils.makeSnackShort;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -29,6 +27,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -90,15 +89,7 @@ public class InventoryFragment extends Fragment {
                     snackbar.setActionTextColor(Color.YELLOW);
                     snackbar.show();
                 } else {
-                    adapter.removeItem(position);
-                    Snackbar snackbar = Snackbar
-                            .make(binding.coordinatorLayout, "Product Deleted.!", Snackbar.LENGTH_LONG);
-                    snackbar.setAction("UNDO", view -> {
-                        adapter.restoreItem(item, position);
-                        binding.recyclerView.scrollToPosition(position);
-                    });
-                    snackbar.setActionTextColor(Color.YELLOW);
-                    snackbar.show();
+                    startActivity(new Intent(activity, EditProductActivity.class).putExtra("item", (Serializable) item));
                 }
             }
         };

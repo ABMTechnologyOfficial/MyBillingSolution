@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MyBillingSolution"
         tools:targetApi="31">
         <activity
-            android:name=".EditProductActivity"
+            android:name=".ui.EditProductActivity"
             android:exported="false" />
         <activity
             android:name=".ui.BillingActivity"
