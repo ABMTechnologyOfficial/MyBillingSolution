@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.DatePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -42,6 +41,8 @@ public class PurchaseActivity extends AppCompatActivity {
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         session = new Session(activity);
+
+        binding.icBack.setOnClickListener(view -> onBackPressed());
 
         binding.icMinus.setOnClickListener(view -> quantity(MINUS));
         binding.icPlus.setOnClickListener(view -> quantity(PLUS));
@@ -110,16 +111,17 @@ public class PurchaseActivity extends AppCompatActivity {
 
         map.put("product_id", mGroupId);
 
-        firebaseDatabase.getReference()
-                .child("inventory")
-                .child(session.getUserId())
-                .child(mGroupId)
-                .setValue(map)
-                .addOnSuccessListener(unused -> {
-                    makeSnackShort(binding.getRoot(), "Data Saved");
-                    progressDialog.dismiss();
-                    finish();
-                });
+        if (mGroupId != null)
+            firebaseDatabase.getReference()
+                    .child("inventory")
+                    .child(session.getUserId())
+                    .child(mGroupId)
+                    .setValue(map)
+                    .addOnSuccessListener(unused -> {
+                        makeSnackShort(binding.getRoot(), "Data Saved");
+                        progressDialog.dismiss();
+                        finish();
+                    });
     }
 
     private void quantity(int mode) {

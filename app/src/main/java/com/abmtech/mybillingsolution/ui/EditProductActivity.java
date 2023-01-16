@@ -50,6 +50,8 @@ public class EditProductActivity extends AppCompatActivity {
         binding.icMinus.setOnClickListener(view -> quantity(MINUS));
         binding.icPlus.setOnClickListener(view -> quantity(PLUS));
 
+        binding.icBack.setOnClickListener(view -> onBackPressed());
+
         binding.textPublish.setOnClickListener(view -> publish());
         binding.llPurchaseDate.setOnClickListener(view -> datePicker());
 
