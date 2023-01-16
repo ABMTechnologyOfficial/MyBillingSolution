@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/header"
         android:layout_alignParentBottom="true"
-        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_15sdp"
         android:scrollbars="none">
 
         <LinearLayout
@@ -182,7 +182,7 @@
                     android:gravity="top|start"
                     android:hint="Item Description"
                     android:inputType="textMultiLine|textCapSentences"
-                    android:lines="8"
+                    android:lines="4"
                     android:maxLines="20"
                     android:textColor="@color/black"
                     android:textColorHint="@color/edit_text_color" />
@@ -216,6 +216,102 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/edit_background"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_15sdp">
+
+                <EditText
+                    android:id="@+id/edt_vendor_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@color/light_gray"
+                    android:fontFamily="@font/heebo_regular"
+                    android:hint="Vendor Name"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/edit_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/edit_background"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_15sdp">
+
+                <EditText
+                    android:id="@+id/edt_vendor_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@color/light_gray"
+                    android:fontFamily="@font/heebo_regular"
+                    android:hint="Vendor Mobile"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/edit_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/edit_background"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_15sdp">
+
+                <EditText
+                    android:id="@+id/edt_vendor_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@color/light_gray"
+                    android:fontFamily="@font/heebo_regular"
+                    android:hint="Vendor Address"
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/edit_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/edit_background"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_15sdp">
+
+                <EditText
+                    android:id="@+id/edt_vendor_gst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@color/light_gray"
+                    android:fontFamily="@font/heebo_regular"
+                    android:hint="Vendor GST Number"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/edit_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>
@@ -225,15 +321,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_25sdp"
         android:layout_marginBottom="@dimen/_15sdp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/heebo_bold"
         android:gravity="center"
         android:paddingHorizontal="@dimen/_10sdp"
-        android:paddingVertical="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_12sdp"
         android:text="Publish"
         android:textColor="@color/white"
-        android:textSize="@dimen/_16sdp" />
+        android:textSize="@dimen/_13sdp" />
 
 </RelativeLayout>

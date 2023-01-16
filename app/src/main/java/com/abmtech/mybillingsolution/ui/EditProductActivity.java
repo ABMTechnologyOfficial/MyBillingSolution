@@ -123,8 +123,8 @@ public class EditProductActivity extends AppCompatActivity {
         map.put("product_id", inventoryModel.getProduct_id());
 
         firebaseDatabase.getReference()
-                .child("inventory")
                 .child(session.getUserId())
+                .child("inventory")
                 .child(inventoryModel.getProduct_id())
                 .updateChildren(map)
                 .addOnSuccessListener(unused -> {

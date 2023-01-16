@@ -30,7 +30,7 @@ public class PurchaseActivity extends AppCompatActivity {
     private ActivityPurchaseBinding binding;
     private FirebaseDatabase firebaseDatabase;
     private Session session;
-    private String name = "", quantity = "", price = "", purchaseDate = "", description = "";
+    private String name = "", quantity = "", price = "", purchaseDate = "", description = "", vendorName = "", vendorMobile = "", vendorAddress = "", vendorGst = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,13 +57,38 @@ public class PurchaseActivity extends AppCompatActivity {
                 if (binding.edtQuantity.getText() != null && binding.edtQuantity.getText().length() != 0 && !binding.edtQuantity.getText().toString().equalsIgnoreCase("0")) {
                     if (binding.edtDescription.getText() != null && binding.edtDescription.getText().length() != 0) {
                         if (binding.edtPurchaseDate.getText() != null && binding.edtPurchaseDate.getText().length() != 0) {
-                            name = binding.edtProductName.getText().toString();
-                            quantity = binding.edtQuantity.getText().toString();
-                            price = binding.edtPrice.getText().toString();
-                            description = binding.edtDescription.getText().toString();
-                            purchaseDate = binding.edtPurchaseDate.getText().toString();
+                            if (binding.edtVendorName.getText() != null && binding.edtVendorName.getText().length() != 0) {
+                                if (binding.edtVendorMobile.getText() != null && binding.edtVendorMobile.getText().length() != 0) {
+                                    if (binding.edtVendorAddress.getText() != null && binding.edtVendorAddress.getText().length() != 0) {
+                                        if (binding.edtVendorGst.getText() != null && binding.edtVendorGst.getText().length() != 0) {
+                                            name = binding.edtProductName.getText().toString();
+                                            quantity = binding.edtQuantity.getText().toString();
+                                            price = binding.edtPrice.getText().toString();
+                                            description = binding.edtDescription.getText().toString();
+                                            purchaseDate = binding.edtPurchaseDate.getText().toString();
 
-                            addToDatabase();
+                                            vendorName = binding.edtVendorName.getText().toString();
+                                            vendorMobile = binding.edtVendorMobile.getText().toString();
+                                            vendorAddress = binding.edtVendorAddress.getText().toString();
+                                            vendorGst = binding.edtVendorGst.getText().toString();
+
+                                            addToDatabase();
+                                        } else {
+                                            binding.edtVendorGst.setError("Vendor Gst Cannot be Empty!");
+                                            binding.edtVendorGst.requestFocus();
+                                        }
+                                    } else {
+                                        binding.edtVendorAddress.setError("Vendor Address Cannot be Empty!");
+                                        binding.edtVendorAddress.requestFocus();
+                                    }
+                                } else {
+                                    binding.edtVendorMobile.setError("Vendor Mobile Cannot be Empty!");
+                                    binding.edtVendorMobile.requestFocus();
+                                }
+                            } else {
+                                binding.edtVendorName.setError("Vendor Name Cannot be Empty!");
+                                binding.edtVendorName.requestFocus();
+                            }
                         } else {
                             ShowUtils.makeSnackShort(binding.getRoot(), "Purchase date cannot be Empty!");
                             binding.llPurchaseDate.performClick();
@@ -106,6 +131,11 @@ public class PurchaseActivity extends AppCompatActivity {
         map.put("currentTime", currentTime);
         map.put("user_id", session.getUserId());
 
+        map.put("vendorName", vendorName);
+        map.put("vendorMobile", vendorMobile);
+        map.put("vendorAddress", vendorAddress);
+        map.put("vendorGst", vendorGst);
+
 
         String mGroupId = firebaseDatabase.getReference().push().getKey();
 
@@ -113,8 +143,8 @@ public class PurchaseActivity extends AppCompatActivity {
 
         if (mGroupId != null)
             firebaseDatabase.getReference()
-                    .child("inventory")
                     .child(session.getUserId())
+                    .child("inventory")
                     .child(mGroupId)
                     .setValue(map)
                     .addOnSuccessListener(unused -> {
@@ -122,6 +152,22 @@ public class PurchaseActivity extends AppCompatActivity {
                         progressDialog.dismiss();
                         finish();
                     });
+
+        Map<String, Object> vendorMap = new HashMap<>();
+
+        vendorMap.put("vendorName", vendorName);
+        vendorMap.put("vendorMobile", vendorMobile);
+        vendorMap.put("vendorAddress", vendorAddress);
+        vendorMap.put("vendorGst", vendorGst);
+        vendorMap.put("purchaseAmount", price);
+        vendorMap.put("purchaseDate", purchaseDate);
+        vendorMap.put("currentTime", currentTime);
+
+        firebaseDatabase.getReference()
+                .child(session.getUserId())
+                .child("vendors")
+                .push()
+                .setValue(vendorMap);
     }
 
     private void quantity(int mode) {

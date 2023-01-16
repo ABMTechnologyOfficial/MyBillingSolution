@@ -3,9 +3,11 @@ package com.abmtech.mybillingsolution.models;
 import java.io.Serializable;
 
 public class InventoryModel implements Serializable {
-    String name, quantity, price, description, purchase_date, currentTime, user_id, product_id;
+    String name, quantity, price, description, purchase_date, currentTime, user_id, product_id, vendorName, vendorMobile, vendorAddress, vendorGst;
 
-    public InventoryModel(String name, String quantity, String price, String description, String purchase_date, String currentTime, String user_id, String product_id) {
+    public InventoryModel(String name, String quantity, String price, String description,
+                          String purchase_date, String currentTime, String user_id, String product_id,
+                          String vendorName, String vendorMobile, String vendorAddress, String vendorGst) {
         this.name = name;
         this.quantity = quantity;
         this.price = price;
@@ -14,9 +16,45 @@ public class InventoryModel implements Serializable {
         this.currentTime = currentTime;
         this.user_id = user_id;
         this.product_id = product_id;
+        this.vendorName = vendorName;
+        this.vendorMobile = vendorMobile;
+        this.vendorAddress = vendorAddress;
+        this.vendorGst = vendorGst;
     }
 
     public InventoryModel() {
+    }
+
+    public String getVendorName() {
+        return vendorName;
+    }
+
+    public void setVendorName(String vendorName) {
+        this.vendorName = vendorName;
+    }
+
+    public String getVendorMobile() {
+        return vendorMobile;
+    }
+
+    public void setVendorMobile(String vendorMobile) {
+        this.vendorMobile = vendorMobile;
+    }
+
+    public String getVendorAddress() {
+        return vendorAddress;
+    }
+
+    public void setVendorAddress(String vendorAddress) {
+        this.vendorAddress = vendorAddress;
+    }
+
+    public String getVendorGst() {
+        return vendorGst;
+    }
+
+    public void setVendorGst(String vendorGst) {
+        this.vendorGst = vendorGst;
     }
 
     public String getProduct_id() {

@@ -99,8 +99,8 @@ public class InventoryFragment extends Fragment {
 
     private void removeItem(int position) {
         firebaseDatabase.getReference()
-                .child("inventory")
                 .child(session.getUserId())
+                .child("inventory")
                 .child(inventoryList.get(position).getProduct_id())
                 .removeValue();
     }
@@ -116,9 +116,14 @@ public class InventoryFragment extends Fragment {
         map.put("user_id", item.getUser_id());
         map.put("product_id", item.getProduct_id());
 
+        map.put("vendorName", item.getVendorName());
+        map.put("vendorMobile", item.getVendorMobile());
+        map.put("vendorAddress", item.getVendorAddress());
+        map.put("vendorGst", item.getVendorGst());
+
         firebaseDatabase.getReference()
-                .child("inventory")
                 .child(item.getUser_id())
+                .child("inventory")
                 .child(item.getProduct_id())
                 .setValue(map);
     }
@@ -135,8 +140,9 @@ public class InventoryFragment extends Fragment {
 
     private void getInventoryList() {
         firebaseDatabase.getReference()
+                .child(session.getUserId())
                 .child("inventory")
-                .child(session.getUserId()).addValueEventListener(new ValueEventListener() {
+                .addValueEventListener(new ValueEventListener() {
                     @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
