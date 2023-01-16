@@ -15,4 +15,7 @@
     <color name="white_light">#E5E7EB</color>
     <color name="light_gray">#E5E7EB</color>
     <color name="edit_text_color">#A1A8B0</color>
+
+
+    <color name="green">#2CE835</color>
 </resources>

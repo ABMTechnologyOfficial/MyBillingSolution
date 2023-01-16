@@ -46,4 +46,8 @@ dependencies {
 
     // Sdp Dependency
     implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    // Circle Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 }
