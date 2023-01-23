@@ -115,7 +115,7 @@
                 android:text="No Transactions Completed to Show"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="@dimen/_11sdp" />
 
         </LinearLayout>
 

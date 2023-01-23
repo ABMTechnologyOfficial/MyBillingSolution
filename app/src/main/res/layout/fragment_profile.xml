@@ -63,6 +63,33 @@
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:text="Shop Name:"
+                        android:textColor="@color/gray_black"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:text="Aman Mochi"
+                        android:textColor="@color/gray_black"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -75,52 +102,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_3sdp"
-                        android:text="Painter"
+                        android:text="GSTN No:"
                         android:textColor="@color/gray_black"
                         android:textSize="12sp" />
-
-                    <View
-                        android:layout_width="@dimen/_1sdp"
-                        android:layout_height="match_parent"
-                        android:layout_marginVertical="@dimen/_2sdp"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:background="@color/gray_black" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:text="Supervisor"
-                        android:textColor="@color/gray_black"
-                        android:textSize="12sp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:orientation="horizontal">
-
-
-                    <ImageView
-                        android:layout_width="@dimen/_6sdp"
-                        android:layout_height="@dimen/_6sdp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_green_dot" />
 
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_3sdp"
-                        android:text="Available for job"
+                        android:text="0000000000"
                         android:textColor="@color/gray_black"
                         android:textSize="12sp" />
 
 
                 </LinearLayout>
+
 
 
             </LinearLayout>
@@ -150,7 +147,7 @@
                     android:fontFamily="@font/heebo_regular"
                     android:text="Phone"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_11sdp" />
 
 
                 <LinearLayout
@@ -166,7 +163,7 @@
                         android:fontFamily="@font/heebo_regular"
                         android:text="+91"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12sdp" />
+                        android:textSize="@dimen/_11sdp" />
 
 
                     <TextView
@@ -177,7 +174,7 @@
                         android:fontFamily="@font/heebo_regular"
                         android:text="95522660000"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12sdp" />
+                        android:textSize="@dimen/_11sdp" />
 
 
                 </LinearLayout>
@@ -188,7 +185,7 @@
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_10sdp"
-                    android:background="@color/gray_black" />
+                    android:background="@color/gray" />
 
 
                 <TextView
@@ -197,7 +194,7 @@
                     android:fontFamily="@font/heebo_regular"
                     android:text="Address"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_11sdp" />
 
 
                 <TextView
@@ -207,7 +204,7 @@
                     android:fontFamily="@font/heebo_regular"
                     android:text="Madhya Pradesh Indore"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_11sdp" />
 
 
             </LinearLayout>
@@ -232,7 +229,7 @@
 
 
                 <RelativeLayout
-                    android:id="@+id/chosse_language"
+                    android:id="@+id/profile_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -255,7 +252,7 @@
                                 android:id="@+id/see_more"
                                 android:layout_width="@dimen/_20sdp"
                                 android:layout_height="@dimen/_20sdp"
-                                android:src="@drawable/ic_language" />
+                                android:src="@drawable/my_prf" />
 
                         </RelativeLayout>
 
@@ -269,7 +266,7 @@
                             android:layout_marginStart="@dimen/_15sdp"
                             android:fontFamily="@font/heebo_regular"
                             android:gravity="center_vertical"
-                            android:text="Change Language"
+                            android:text="Profile Details"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_10sdp" />
 
@@ -293,11 +290,11 @@
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_10sdp"
-                    android:background="@color/gray_black" />
+                    android:background="@color/gray" />
 
 
                 <RelativeLayout
-                    android:id="@+id/invite_friend"
+                    android:id="@+id/total_input_output"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -319,7 +316,7 @@
                             <ImageView
                                 android:layout_width="@dimen/_20sdp"
                                 android:layout_height="@dimen/_20sdp"
-                                android:src="@drawable/ic_rupee" />
+                                android:src="@drawable/input_output" />
 
                         </RelativeLayout>
 
@@ -333,7 +330,7 @@
                             android:layout_marginStart="@dimen/_15sdp"
                             android:fontFamily="@font/heebo_regular"
                             android:gravity="center_vertical"
-                            android:text="Invite Friends"
+                            android:text="Total Input/Output"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_10sdp" />
 
@@ -357,11 +354,11 @@
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_10sdp"
-                    android:background="@color/gray_black" />
+                    android:background="@color/gray" />
 
 
                 <RelativeLayout
-                    android:id="@+id/payment_det"
+                    android:id="@+id/vendor_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -383,7 +380,7 @@
                             <ImageView
                                 android:layout_width="@dimen/_20sdp"
                                 android:layout_height="@dimen/_20sdp"
-                                android:src="@drawable/ic_bank" />
+                                android:src="@drawable/list" />
 
                         </RelativeLayout>
 
@@ -397,7 +394,7 @@
                             android:layout_marginStart="@dimen/_15sdp"
                             android:fontFamily="@font/heebo_regular"
                             android:gravity="center_vertical"
-                            android:text="Payment Details"
+                            android:text="Vendor List"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_10sdp" />
 
@@ -421,11 +418,11 @@
                     android:layout_height="@dimen/_1sdp"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_10sdp"
-                    android:background="@color/gray_black" />
+                    android:background="@color/gray" />
 
 
                 <RelativeLayout
-                    android:id="@+id/chat_with_admin"
+                    android:id="@+id/customer_service"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 

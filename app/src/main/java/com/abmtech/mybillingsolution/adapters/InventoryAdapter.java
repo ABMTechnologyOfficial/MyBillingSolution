@@ -1,7 +1,9 @@
 package com.abmtech.mybillingsolution.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -9,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.abmtech.mybillingsolution.databinding.ItemInventoryLayBinding;
 import com.abmtech.mybillingsolution.models.InventoryModel;
+import com.abmtech.mybillingsolution.ui.InventoryItemDetailsActivity;
 
 import java.util.ArrayList;
 
@@ -32,10 +35,18 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.View
         InventoryModel current = data.get(position);
 
         holder.binding.textProductName.setText(current.getName());
-        holder.binding.textProductId.setText(current.getProduct_id());
+       // holder.binding.textProductId.setText(current.getProduct_id());
         holder.binding.textPrice.setText(current.getPrice());
-        holder.binding.textPurchaseDate.setText(current.getPurchase_date());
+       // holder.binding.textPurchaseDate.setText(current.getPurchase_date());
         holder.binding.textQuantity.setText(current.getQuantity());
+        holder.binding.textDiscription.setText(current.getDescription());
+        holder.binding.itemDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, InventoryItemDetailsActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -66,4 +77,6 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.View
     public ArrayList<InventoryModel> getData() {
         return data;
     }
+
+
 }

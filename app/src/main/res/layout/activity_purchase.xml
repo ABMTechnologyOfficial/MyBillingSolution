@@ -20,7 +20,7 @@
             android:layout_centerVertical="true"
             android:layout_gravity="center_vertical"
             android:paddingHorizontal="@dimen/_11sdp"
-            android:paddingVertical="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_11sdp"
             android:src="@drawable/ic_back" />
 
         <TextView
@@ -69,7 +69,7 @@
                     android:inputType="textCapWords"
                     android:textColor="@color/black"
                     android:textColorHint="@color/edit_text_color"
-                    android:textSize="@dimen/_12sdp"/>
+                    android:textSize="@dimen/_11sdp"/>
 
             </LinearLayout>
 
@@ -93,7 +93,7 @@
                     android:inputType="number"
                     android:textColor="@color/black"
                     android:textColorHint="@color/edit_text_color"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_11sdp" />
 
             </LinearLayout>
 
@@ -112,7 +112,7 @@
                     android:fontFamily="@font/heebo_medium"
                     android:text="Total Quantity"
                     android:textColor="@color/edit_text_color"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_11sdp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -148,7 +148,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textColorHint="@color/edit_text_color"
-                        android:textSize="@dimen/_12sdp" />
+                        android:textSize="@dimen/_11sdp" />
 
                     <ImageView
                         android:id="@+id/ic_plus"
@@ -170,7 +170,7 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="@dimen/_10sdp"
                 android:paddingVertical="@dimen/_15sdp"
-                android:textSize="@dimen/_12sdp">
+                android:textSize="@dimen/_11sdp">
 
                 <EditText
                     android:id="@+id/edt_description"
@@ -212,7 +212,7 @@
                     android:inputType="date"
                     android:textColor="@color/black"
                     android:textColorHint="@color/edit_text_color"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_11sdp" />
 
             </LinearLayout>
 

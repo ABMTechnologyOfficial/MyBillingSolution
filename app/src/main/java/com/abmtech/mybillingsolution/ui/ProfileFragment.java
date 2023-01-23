@@ -1,6 +1,7 @@
 package com.abmtech.mybillingsolution.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,41 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         activity = requireActivity();
+
+
+        binding.profileDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),ProfileDetailsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        binding.totalInputOutput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),TotalInputOutputActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.vendorList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),VenderListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.customerService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),CustomerSupportActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
         return binding.getRoot();

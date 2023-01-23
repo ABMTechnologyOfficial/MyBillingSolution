@@ -21,6 +21,26 @@
         <entry key="..\:/Users/Divyendu Jain/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/Users/Divyendu Jain/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/item_inventory_lay.xml" value="0.2" />
         <entry key="..\:/Users/Divyendu Jain/AndroidStudioProjects/MyBillingSolution/app/src/main/res/menu/bottom_nav_menu.xml" value="0.24322916666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/drawable/ic_baseline_chevron_left_24.xml" value="0.1595" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/drawable/ic_baseline_chevron_left_black_24.xml" value="0.1595" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/drawable/ic_baseline_chevron_right_24.xml" value="0.1455" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/drawable/ic_baseline_expand_more_24.xml" value="0.1615" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/drawable/ic_circle2.xml" value="0.1455" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/drawable/ic_forward.xml" value="0.1455" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/drawable/ic_outline_call.xml" value="0.1595" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/drawable/ic_svg_profile.xml" value="0.1455" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/activity_customer_support.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/activity_inventory_item_details.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/activity_profile_details.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/activity_total_input_output.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/activity_vender_list.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/fragment_inventory.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/home_layout.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyBillingSolution/app/src/main/res/layout/item_inventory_lay.xml" value="0.264" />
       </map>
     </option>
   </component>
