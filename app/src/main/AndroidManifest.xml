@@ -14,10 +14,10 @@
         android:theme="@style/Theme.MyBillingSolution"
         tools:targetApi="31">
         <activity
-            android:name=".AddBillItemActivity"
+            android:name=".ui.AddBillCustomerDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".AddBillActivity"
+            android:name=".ui.AddBillItemActivity"
             android:exported="false" />
         <activity
             android:name=".ui.SignupBankActivity"

@@ -8,6 +8,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -66,6 +67,7 @@ public class AddBillCustomerDetailActivity extends AppCompatActivity {
             if (dialogBinding.edtText.getText().length() != 0) {
                     firebaseDatabase.getReference()
                             .child("gst_percentage")
+                            .push()
                             .setValue(dialogBinding.edtText.getText().toString())
                             .addOnSuccessListener(unused -> {
                                 makeSnackShort(binding.getRoot(), "Data Saved");
@@ -76,6 +78,8 @@ public class AddBillCustomerDetailActivity extends AppCompatActivity {
                 dialogBinding.edtText.setError("Field Can't be Empty!");
             }
         });
+
+        dialog.show();
     }
 
     private void getGstList() {
@@ -94,6 +98,8 @@ public class AddBillCustomerDetailActivity extends AppCompatActivity {
                             }
                         }
                         gstList.add(gstList.size(), "Add New Percentage");
+
+                        binding.spinnerGstPercent.setAdapter(new ArrayAdapter<>(activity, android.R.layout.simple_spinner_item, gstList));
                     }
 
                     @Override

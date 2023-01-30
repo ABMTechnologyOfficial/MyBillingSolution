@@ -24,7 +24,7 @@ public class HomeFragment extends Fragment {
         activity = requireActivity();
 
         binding.textAddPurchase.setOnClickListener(view -> startActivity(new Intent(activity, PurchaseActivity.class)));
-        binding.textGenerateBill.setOnClickListener(view -> startActivity(new Intent(activity, BillingActivity.class)));
+        binding.textGenerateBill.setOnClickListener(view -> startActivity(new Intent(activity, AddBillCustomerDetailActivity.class)));
 
         return binding.getRoot();
     }
