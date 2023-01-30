@@ -17,6 +17,7 @@ import com.abmtech.mybillingsolution.R;
 import com.abmtech.mybillingsolution.databinding.ActivitySignupBankBinding;
 import com.abmtech.mybillingsolution.util.ProgressDialog;
 import com.abmtech.mybillingsolution.util.Session;
+import com.abmtech.mybillingsolution.util.ShowUtils;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -182,6 +183,8 @@ public class SignupBankActivity extends AppCompatActivity {
                     }
                 })
                 .addOnFailureListener(e -> {
+                    progressDialog.dismiss();
+                    ShowUtils.makeSnackShort(binding.getRoot(), e.getLocalizedMessage());
                     Log.e("SignupActivity", "" + e.getLocalizedMessage());
                 });
     }
