@@ -105,6 +105,9 @@ public class LoginActivity extends AppCompatActivity {
                         .putExtra("email", binding.edtEmail.getText().toString().trim())
                         .putExtra("password", binding.edtPassword.getText().toString().trim())
                 );
+            } else if (e.toString().contains("The password is invalid")) {
+                binding.edtPassword.requestFocus();
+                binding.edtPassword.setError("Password Incorrect");
             }
         });
     }
