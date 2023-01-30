@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.AddBillCustomerDetailActivity"
     tools:ignore="HardcodedText,Autofill,ContentDescription">
 
@@ -90,7 +91,7 @@
                     android:background="@color/light_gray"
                     android:fontFamily="@font/heebo_regular"
                     android:hint="Customer Mobile"
-                    android:inputType="number"
+                    android:inputType="phone"
                     android:textColor="@color/black"
                     android:textColorHint="@color/edit_text_color"
                     android:textSize="@dimen/_12sdp" />
@@ -107,14 +108,16 @@
                 android:paddingVertical="@dimen/_15sdp">
 
                 <EditText
-                    android:id="@+id/edt_customer_address_one"
+                    android:id="@+id/edt_customer_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_5sdp"
                     android:background="@color/light_gray"
                     android:fontFamily="@font/heebo_regular"
-                    android:hint="Customer Address Line One"
-                    android:inputType="textCapSentences"
+                    android:hint="Customer Address"
+                    android:lines="3"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
                     android:textColor="@color/black"
                     android:textColorHint="@color/edit_text_color"
                     android:textSize="@dimen/_12sdp" />
@@ -122,30 +125,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:background="@drawable/edit_background"
-                android:orientation="horizontal"
-                android:paddingHorizontal="@dimen/_10sdp"
-                android:paddingVertical="@dimen/_15sdp">
-
-                <EditText
-                    android:id="@+id/edt_customer_address_two"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:background="@color/light_gray"
-                    android:fontFamily="@font/heebo_regular"
-                    android:hint="Customer Address Line Two"
-                    android:inputType="textCapSentences"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/edit_text_color"
-                    android:textSize="@dimen/_12sdp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+                android:id="@+id/due_date_lay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
@@ -166,6 +146,33 @@
                     android:inputType="datetime"
                     android:textColor="@color/black"
                     android:textColorHint="@color/edit_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gst_pecentage_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/edit_background"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp">
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner_gst_percent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray"
+                    android:clickable="false"
+                    android:fontFamily="@font/heebo_regular"
+                    android:hint="Gst Percentage"
+                    app:ms_padding_left="@dimen/_4sdp"
+                    android:inputType="datetime"
+                    app:ms_background_color="@color/light_gray"
+                    app:ms_text_color="@color/black"
+                    app:ms_hint_color="@color/edit_text_color"
                     android:textSize="@dimen/_12sdp" />
 
             </LinearLayout>
