@@ -77,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                             UsersModel model = snapshot.getValue(UsersModel.class);
                             if (model != null) {
                                 session.setLogin(true);
+                                session.setUserId(model.getUserId());
                                 session.setUserName(model.getUserName());
                                 session.setMobile(model.getMobileNumber());
                                 session.setEmail(model.getEmail());

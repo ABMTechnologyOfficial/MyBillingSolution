@@ -12,6 +12,7 @@ public class Session extends Object {
     private static final String Email = "email";
     private static final String UserId = "user_id";
     private static final String User_name = "user_name";
+    private static final String user_image = "user_image";
 
     private Context _context;
     private SharedPreferences SharedPref;
@@ -39,6 +40,11 @@ public class Session extends Object {
         editor.apply();
         editor.commit();
     }
+     public void setUser_image(String email) {
+        editor.putString(user_image, email);
+        editor.apply();
+        editor.commit();
+    }
 
     public String getUserName() {
         return SharedPref.getString(User_name, "");
@@ -47,6 +53,10 @@ public class Session extends Object {
 
     public String getUserId() {
         return SharedPref.getString(UserId, "");
+    }
+
+    public String getUser_image() {
+        return SharedPref.getString(user_image, "");
     }
 
     public void setUserId(String userId) {

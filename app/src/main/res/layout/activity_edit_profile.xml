@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.EditProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_profile"
+            app:civ_border_color="@color/color_primary"
+            app:civ_border_width="0.3dp" />
+
+        <ImageView
+            android:layout_toEndOf="@id/profile_image"
+            android:layout_below="@id/profile_image"
+            android:id="@+id/edit_profile_image"
+            android:layout_marginStart="-35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_marginTop="-40dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_camera"/>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_toEndOf="@id/profile_image"
+            android:layout_below="@id/profile_image"
+            android:id="@+id/progress_bar"
+            android:layout_marginStart="-35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_marginTop="-40dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_camera"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_below="@id/edit_profile_image"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/edt_email"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="Email"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="User Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/edit_userName"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="User Name"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Shop Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <EditText
+                android:id="@+id/edit_shopName"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="Shop Name"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Address Line 1 "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <EditText
+                android:id="@+id/edit_address_1"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="Address Line 1"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Address Line 2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <EditText
+                android:id="@+id/edit_address_2"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="Address Line 2"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Address Line 3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+               <EditText
+                android:id="@+id/edit_address_3"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="Address Line 3"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="GST No."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+            <EditText
+                android:id="@+id/edit_gst_number"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="GST No."
+                android:padding="@dimen/_10sdp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Mobile Number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+            <EditText
+                android:id="@+id/edit_phone_number"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="Phone Number"
+                android:padding="@dimen/_10sdp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Bank Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/edit_bank_name"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="Bank Name"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Account Holder Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/edit_account_holder_name"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="Account Holder Name"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Account Number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/edit_account_number"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="Account Number"
+                android:padding="@dimen/_10sdp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Branch Address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/edit_bankAddress"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="Branch Address"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textPostalAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Branch Address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/edit_ifsc_code"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="IFSC Code"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textPostalAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/heebo_regular"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/edit_about"
+                android:autofillHints="emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_background"
+                android:fontFamily="@font/heebo_regular"
+                android:hint="Description"
+                android:padding="@dimen/_10sdp"
+                android:inputType="textMultiLine"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_black"
+                android:textSize="@dimen/_12sdp" />
+
+
+
+            <TextView
+                android:id="@+id/text_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/heebo_bold"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

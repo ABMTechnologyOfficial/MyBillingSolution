@@ -16,6 +16,7 @@ public class UsersModel {
             accountHolderName,
             accountNumber,
             bankIfscCode,
+            image,
             bankBranchAddress;
 
     public UsersModel() {
@@ -45,6 +46,14 @@ public class UsersModel {
 
     public String getUserId() {
         return userId;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public void setUserId(String userId) {
@@ -169,5 +178,28 @@ public class UsersModel {
 
     public void setBankBranchAddress(String bankBranchAddress) {
         this.bankBranchAddress = bankBranchAddress;
+    }
+
+    @Override
+    public String toString() {
+        return "UsersModel{" +
+                "userId='" + userId + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", userName='" + userName + '\'' +
+                ", shopName='" + shopName + '\'' +
+                ", mobileNumber='" + mobileNumber + '\'' +
+                ", gstNumber='" + gstNumber + '\'' +
+                ", addressLineOne='" + addressLineOne + '\'' +
+                ", addressLineTwo='" + addressLineTwo + '\'' +
+                ", addressLineThree='" + addressLineThree + '\'' +
+                ", description='" + description + '\'' +
+                ", bankName='" + bankName + '\'' +
+                ", accountHolderName='" + accountHolderName + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", bankIfscCode='" + bankIfscCode + '\'' +
+                ", image='" + image + '\'' +
+                ", bankBranchAddress='" + bankBranchAddress + '\'' +
+                '}';
     }
 }
